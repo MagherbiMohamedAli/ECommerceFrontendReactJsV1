@@ -10,7 +10,7 @@ const Listarticles = () => {
     getarticles()
   }, [])
   const getarticles = async () => {
-    await axios.get("http://localhost:3001/api/articles")
+    await axios.get("https://e-commerce-backend-node-js.vercel.app/api/articles")
       .then(res => {
         setArticles(res.data)
         console.log(res.data)
@@ -22,7 +22,7 @@ const Listarticles = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this product ?")) {
-      await axios.delete(`http://localhost:3001/api/articles/${id}`)
+      await axios.delete(`https://e-commerce-backend-node-js.vercel.app/api/articles/${id}`)
         .then(res => {
           getarticles()
         })

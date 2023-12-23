@@ -18,7 +18,7 @@ const Insertcategorie = () => {
       nomcategorie: nomcategorie,
       imagecategorie: imagecategorie
     }
-    await axios.post("http://localhost:3001/api/categories", categorie);
+    await axios.post("https://e-commerce-backend-node-js.vercel.app/api/categories", categorie);
     navigate("/categories");
   };
   return (

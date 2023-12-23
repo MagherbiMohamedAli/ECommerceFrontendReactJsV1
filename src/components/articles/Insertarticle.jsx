@@ -22,7 +22,7 @@ const Insertarticle = () => {
   }, [])
   const getscategories = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/api/scategories")
+      const res = await axios.get("https://e-commerce-backend-node-js.vercel.app/api/scategories")
       setScategories(res.data)
     } catch (error) {
       console.log(error)
@@ -39,7 +39,7 @@ const Insertarticle = () => {
       imageart: imageart,
       scategorieID: scategorieID
     }
-    await axios.post("http://localhost:3001/api/articles", article);
+    await axios.post("https://e-commerce-backend-node-js.vercel.app/api/articles", article);
     navigate("/articles");
   };
   return (

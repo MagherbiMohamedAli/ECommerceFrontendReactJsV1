@@ -10,7 +10,7 @@ const Listcategorie = () => {
     getcategories()
   }, [])
   const getcategories = async () => {
-    await axios.get("http://localhost:3001/api/categories")
+    await axios.get("https://e-commerce-backend-node-js.vercel.app/api/categories")
       .then(res => {
         setCategories(res.data)
         console.log(res.data)
@@ -22,7 +22,7 @@ const Listcategorie = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this category ?")) {
-      await axios.delete(`http://localhost:3001/api/categories/${id}`)
+      await axios.delete(`https://e-commerce-backend-node-js.vercel.app/api/categories/${id}`)
         .then(res => {
           getcategories()
         })
